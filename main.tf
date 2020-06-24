@@ -26,10 +26,7 @@ resource "azurerm_network_security_group" "network-sg" {
         destination_address_prefix = "*"
     }
 
-    tags = {
-        environment = "Terraform Demo"
-        Key = "DoNotDelete"
-    }
+    tags = var.tags
 }
 
 resource "azurerm_subnet_network_security_group_association" "nsg-assoc" {

@@ -13,3 +13,7 @@ variable "identifier" {
 variable "subnet_id" {
     description = "Subnet ID"
 }
+
+variable "tags" {
+    type = map(string)
+}
